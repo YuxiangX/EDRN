@@ -3,11 +3,11 @@ import torch
 import torch.nn as nn
 
 def make_model(args, parent=False):
-    return MDRN(args)
+    return EDRN(args)
 
-class MDRN(nn.Module):
+class EDRN(nn.Module):
     def __init__(self, args, conv=common.default_conv):
-        super(MDRN, self).__init__()
+        super(EDRN, self).__init__()
 
         n_resblocks = args.n_resblocks
         n_feats = 64
